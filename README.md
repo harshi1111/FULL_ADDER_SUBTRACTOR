@@ -1,6 +1,6 @@
-# FULL_ADDER_SUBTRACTOR
-
-Implementation-of-Full-Adder-and-Full-subtractor-circuit
+## NAME : HARSHITHA V
+## REGISTER NO : 212223230074
+## EXP 4 : FULL ADDER AND SUBTRACTOR
 
 **AIM:**
 
@@ -44,12 +44,26 @@ Write the detailed procedure here
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+module ex4 (a,b,c,d,cin,bin,diff,sum,carry,borrow);
+input a,b,c,d,bin,cin;
+output sum,carry,diff,borrow;
+assign sum = a^b^cin;
+assign carry = (a&b)|(cin & (a^b));
+assign diff = c^d^bin;
+assign borrow =(~c&d)|(((~c^d))& bin);
+endmodule
+```
 
 **RTL Schematic**
 
+![image](https://github.com/user-attachments/assets/35cf713c-0e89-4cdd-a361-aa5cc0e4176b)
+
+
 **Output Timing Waveform**
+
+![image](https://github.com/user-attachments/assets/b9c34fd8-2361-4825-a5de-70c1b1484e62)
+
 
 **Result:**
 
