@@ -24,7 +24,10 @@ Carry = AB + ACin + BCin
 
 ![image](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/154305477/0f30ba51-5ffb-4198-845f-18e054f675e7)
 
-**Figure -1 FULL ADDER**
+**Truthtable**
+
+![image](https://github.com/user-attachments/assets/1f46f2dd-3403-4fec-aa6c-665179ecbd7d)
+
 
 **Full Subtractor**
 
@@ -38,9 +41,33 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+![image](https://github.com/user-attachments/assets/dd97f66f-9381-4738-9382-c77382df3361)
+
+
 **Procedure**
 
-Write the detailed procedure here
+
+1. Start the module  
+   - The module is named ex4.  
+   - It has 6 input signals: a, b, c, d, cin, and bin.  
+   - It has 4 output signals: sum, carry, diff, and borrow.
+
+2. Adder part  
+   - sum is calculated using XOR of a, b, and cin  
+     → sum = a ^ b ^ cin  
+   - carry is calculated using AND and OR operations  
+     → carry = (a & b) | (cin & (a ^ b))
+
+3. Subtractor part  
+   - diff is calculated using XOR of c, d, and bin  
+     → diff = c ^ d ^ bin  
+   - borrow is calculated using NOT, AND, and XOR operations  
+     → borrow = (~c & d) | ((~c ^ d) & bin)
+
+4. End the module  
+   - The module ends with endmodule
+
+
 
 **Program:**
 
